@@ -67,7 +67,7 @@ class UserController {
         maxAge: 30 * 24 * 60 * 60 * 1000,
         secure: true,
         httpOnly: true,
-        domain: "furniture-back-five.vercel.app",
+        domain: "furniture-back-vercel.vercel.app",
         sameSite: "none",
       });
       return res.json({
@@ -89,7 +89,7 @@ class UserController {
       res.clearCookie("refreshToken", {
         sameSite: "none",
         secure: true,
-        domain: ".furniture-back-five.vercel.app",
+        domain: ".furniture-back-vercel.vercel.app",
       });
       const userDto = new UserDto(userData);
       return res.json(userDto);
@@ -111,7 +111,7 @@ class UserController {
         res.clearCookie("refreshToken", {
           sameSite: "none",
           secure: true,
-          domain: ".furniture-back-five.vercel.app",
+          domain: ".furniture-back-vercel.vercel.app",
         });
         throw ApiError.UnauthorizedError();
       }
@@ -131,7 +131,7 @@ class UserController {
         maxAge: 30 * 24 * 60 * 60 * 1000,
         secure: true,
         httpOnly: true,
-        domain: "furniture-back-five.vercel.app",
+        domain: "furniture-back-vercel.vercel.app",
         sameSite: "none",
       });
       return res.json({
